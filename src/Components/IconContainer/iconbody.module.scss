@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Quicksand:wght@500;600;700&display=swap');
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand';
+    font-style: normal;
+    .ellipse-cover {
+        background-image: url('../../images/Ellipse\ 25.svg');
+        background-repeat: no-repeat;
+        background-position: top right;
+        padding: 5px 5px 23px 0;
+    }
+    hr {
+        border-top: 1px solid #E2E2E2;
+        width: 60px;
+    }
+    .text {
+        padding-top: 11px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #000000;
+    }
+}

@@ -27,7 +27,7 @@ export const ButtonCard:React.FC<CardProps> = (props) => {
 interface CardDetails {
     bgImage: string,
     height: string,
-    width: string,
+    width?: string,
     bdRadius: string,
     children: React.ReactNode
 }
@@ -36,7 +36,7 @@ export const Card:React.FC<CardDetails> = ({ bgImage, height, width, bdRadius, c
     let style = {
         height: `${height}`,
         width: `${width}`,
-        backgroundImage: `${bgImage}`,
+        backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${bgImage})`,
         borderRadius: `${bdRadius}`
     }
 
