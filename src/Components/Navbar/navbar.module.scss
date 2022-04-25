@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@700&family=Quicksand:wght@500;600;700&display=swap');
+* {
+    font-family: 'Quicksand';
+    padding: 0px;
+    margin: 0px;
+}
+
+.nav-container {
+    display: block;
+    padding-top: 22px;
+    .search-authentication {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 29px;
+        .search-container {
+            display: flex;
+            flex-direction: row;
+            border: 1px solid #E8E8EA;
+            box-sizing: border-box;
+            border-radius: 5px;
+            height: 35px;
+            align-items: center;
+            margin-left: 290px;
+            margin-right: auto;
+            .search-icon {
+                width: 20px;
+                height: 20px;
+                padding: 0 12px 0 12px;
+            }
+            .info-input {
+                border: none;
+                width: 250px;
+                height: 33px;
+            }
+            .info-input::placeholder {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                text-align: start;
+                color: #7A7D85;
+            }
+            .search {
+                background: #ED6FAB;
+                border-radius: 0px 5px 5px 0px;
+                border: none;
+                width: 85px;
+                height: 35px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 24px;
+                color: #FFFFFF;
+            }
+        }
+        .auth {
+            margin-right: 117px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #7A7D85;
+            .about-diary {
+                margin-right: 31px;
+            }
+            .sign-in {
+                margin-right: 31px;
+            }
+            .sign-up {
+                width: 85px;
+                height: 35px;
+                background: #ED6FAB;
+                border-radius: 5px;
+                align-items: center;
+                p {
+                    text-align: center;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 24px;
+                    color: #FFFFFF;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+    hr {
+        border-top: 1px solid #E4E5E7;
+    }
+    .nav-sections {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        color: #7A7D85;
+        padding: 8px 0 9px 0;
+    }
+}
