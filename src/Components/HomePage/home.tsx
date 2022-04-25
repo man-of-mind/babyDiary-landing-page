@@ -17,6 +17,10 @@ import Scheduler from "../../images/scheduler.svg";
 import { IconBody } from "../IconContainer/IconBody";
 import babyDiary from "../../images/babydiary.svg";
 import diary from "../../images/diary.svg";
+import jotter from "../../images/jotter.svg";
+import babyName from "../../images/babyName.svg";
+import pregnancyPain from "../../images/pregnancyPain.svg";
+import pregnancySign from "../../images/pregnancySigns.svg";
 
 
 export default function Home() {
@@ -84,7 +88,21 @@ export default function Home() {
                 <div className={styles["baby-videos"]}>
                     <div className={styles['header']}>
                         <img src={babyDiary} alt="logo"></img>
-                        <img src={diary} alt="baby videos" />
+                        <img src={diary} alt="baby videos" className={styles['diary']}/>
+                        <div className={styles['text']}>VIDEOS</div>
+                    </div>
+                    <div className={styles['video-container']}>
+                        <div className={styles['people-watching-text']}>
+                            What people are watching now
+                        </div>
+                        <ButtonCard width="178px" bgColor="#FFFFFF" color="#000" text="View more videos"></ButtonCard>
+                    </div>
+                    <div className={styles['videos']}>
+                        <div>
+                            <Card bgImage={jotter} width="292px" height="100px" bdRadius="10px">
+                                <img src={playIcon} alt="play video"></img> 
+                            </Card>
+                        </div>
                     </div>
                 </div>
             </div>
