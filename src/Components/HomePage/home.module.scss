@@ -39,6 +39,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: #E5E5E5;
     .pregnancy-text {
         padding-top: 47px;
         padding-bottom: 36px;
@@ -160,6 +161,179 @@
                 font-weight: 700;
                 font-size: 32px;
                 line-height: 30px;
+            }
+        }
+        .videos {
+            width: calc(100% - 200px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px 75px 100px;
+            .videos-img {
+                width: 48px;
+                height: 48px;
+                margin: auto;
+                display: block;
+                padding-top: 55px;
+            }
+            .text {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 5px;
+                .description {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 30px;
+                }
+                .minute {
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 30px;
+                    text-align: right;
+                    color: rgba(255, 255, 255, 0.4);
+                }
+            }
+        }
+    }
+    .testimonial {
+        display: flex;
+        padding: 93px 100px 93px 100px;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(100% - 200px);
+        .testify-container {
+            background-image: url('../../images/testominals.svg');
+            background-position: left;
+            background-repeat: no-repeat;
+            width: 582px;
+            .testimony {
+                word-wrap: break-word;
+                margin-right: 40px;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 30px;
+                color: #000000;
+                padding-bottom: 5px;
+            }
+            .testifier {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 30px;
+                color: #989898;
+            }
+        }
+        .next-icon {
+            display: block;
+            float: right;
+            margin-top: 90px;
+        }
+    }
+    .diary-blog {
+        padding: 0 100px 87px 100px;
+        width: calc(100% - 200px);
+        .baby-blog {
+            font-weight: 700;
+            font-size: 32px;
+            line-height: 30px;
+            color: #242424;
+        }
+        .blog {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 36px;
+            .blog-title {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 30px;
+                color: #000000;
+            }
+            .description {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 30px;
+                color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+    .baby-center-app {
+        margin: 0 100px 103px 100px;
+        height: 279px;
+        width: calc(100% - 200px);
+        background: #aca6a8;
+        border-radius: 17px;
+        display: flex;
+        justify-content: space-between;
+        .app-store {
+            padding: 73px 0 73px 79px;
+            margin-right: auto;
+            color: #332323;
+            .babyCenter {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 32px;
+                line-height: 30px;
+                padding-bottom: 11px;
+            }
+            p {
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 30px;
+                padding-bottom: 17px;
+            }
+            .app-store-img {
+                padding-right: 10px;
+            }
+        }
+        .diary-img {
+            padding-right: 45px;
+            padding-top: 45px;
+            width: 188px;
+        }
+        .blog-img {
+            padding-right: 45px;
+            padding-bottom: 45px;
+            width: 188px;
+        }
+    }
+    .footer-line {
+        border-top: 1px solid #E4E5E7;
+        width: 100%;
+    }
+    footer {
+        padding: 47px 128px 42px 128px;
+        width: calc(100% - 256px);
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            div {
+                p {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #7A7E84;
+                }
+                table tr td {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 30px;
+                    color: #7A7E84;
+                    padding-right: 10px;
+                }
+            }
+        }
+        .footer-text {
+            padding-top: 28px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 30px;
+            color: #868686;
+            p a {
+                text-decoration: none;
+                color: red
             }
         }
     }

@@ -21,6 +21,13 @@ import jotter from "../../images/jotter.svg";
 import babyName from "../../images/babyName.svg";
 import pregnancyPain from "../../images/pregnancyPain.svg";
 import pregnancySign from "../../images/pregnancySigns.svg";
+import backIcon from "../../images/back.svg";
+import mumBaby from "../../images/mum-baby.svg";
+import nextIcon from "../../images/next.svg";
+import appStore from "../../images/appStore.svg";
+import diaryImage from "../../images/diary-image.svg";
+import googlePlay from "../../images/googlePlay.svg";
+import blogImage from "../../images/blog-image.svg";
 
 
 export default function Home() {
@@ -99,12 +106,148 @@ export default function Home() {
                     </div>
                     <div className={styles['videos']}>
                         <div>
-                            <Card bgImage={jotter} width="292px" height="100px" bdRadius="10px">
-                                <img src={playIcon} alt="play video"></img> 
+                            <Card bgImage={jotter} width="262px" height="160px" bdRadius="10px">
+                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
                             </Card>
+                            <div className={styles['text']}>
+                                <p className={styles['description']}>7 Baby’s Checklist</p>
+                                <p className={styles['minute']}>12 mins</p>
+                            </div>
+                        </div>
+                        <div>
+                            <Card bgImage={babyName} width="262px" height="160px" bdRadius="10px">
+                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
+                            </Card>
+                            <div className={styles['text']}>
+                                <p className={styles['description']}>Awesome baby name ideas</p>
+                                <p className={styles['minute']}>12 mins</p>
+                            </div>
+                        </div>
+                        <div>
+                            <Card bgImage={pregnancySign} width="262px" height="160px" bdRadius="10px">
+                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
+                            </Card>
+                            <div className={styles['text']}>
+                                <p className={styles['description']}>10 signs you are pregnant</p>
+                                <p className={styles['minute']}>12 mins</p>
+                            </div>
+                        </div>
+                        <div>
+                            <Card bgImage={pregnancyPain} width="262px" height="160px" bdRadius="10px">
+                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
+                            </Card>
+                            <div className={styles['text']}>
+                                <p className={styles['description']}>Pregnancy and back pain</p>
+                                <p className={styles['minute']}>12 mins</p>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div className={styles['testimonial']}>
+                    <img src={backIcon} alt="previous" className={styles['back']}></img>
+                    <div className={styles['testify-container']}>
+                        <p className={styles['testimony']}>Love this app! I've been using it since I found out I was pregnant. 
+                            My daughter is now 8 months old, and I still rely on the information provided. 
+                            I would be lost without it.
+                        </p>
+                        <p className={styles['testifier']}>Oyinkansola Salami</p>
+                    </div>
+                    <Card bgImage={mumBaby} width="487px" height="260px" bdRadius="10px">
+                        <img className={styles['next-icon']} src={nextIcon} alt="next testimony"></img> 
+                    </Card>
+                </div>
+                <div className={styles['diary-blog']}>
+                    <div className={styles['baby-blog']}>Baby Diary Blog</div>
+                    <div className={styles['blog']}>
+                        <div>
+                            <Card bgImage={jotter} width="262px" height="160px" bdRadius="10px" />
+                            <p className={styles['blog-title']}>7 Baby’s Checklist</p>
+                            <p className={styles['description']}>From fertility troubles to baby-name...</p>        
+                        </div>
+                        <div>
+                            <Card bgImage={babyName} width="262px" height="160px" bdRadius="10px" />
+                            <p className={styles['blog-title']}>Awesome baby name ideas</p>
+                            <p className={styles['description']}>From fertility troubles to baby-name...</p>
+                        </div>
+                        <div>
+                            <Card bgImage={pregnancySign} width="262px" height="160px" bdRadius="10px" />
+                            <p className={styles['blog-title']}>10 signs you are pregnant</p>
+                            <p className={styles['description']}>From fertility troubles to baby-name...</p>
+                        </div>
+                        <div>
+                            <Card bgImage={pregnancyPain} width="262px" height="160px" bdRadius="10px" />
+                            <p className={styles['blog-title']}>Pregnancy and back pain</p>
+                            <p className={styles['description']}>From fertility troubles to baby-name...</p>
+                        </div>
+                    </div>
+                </div>
+                <div className={styles['baby-center-app']}>
+                    <div className={styles['app-store']}>
+                        <div className={styles['babyCenter']}>Get the BabyCenter App</div>
+                        <p>The #1 app for tracking pregnancy and baby growth.</p>
+                        <img src={appStore} alt="get app from app store" className={styles['app-store-img']}></img>
+                        <img src={googlePlay} alt="get app from play store"></img>
+                    </div>
+                    <img src={diaryImage} alt="baby diary pic" className={styles['diary-img']}></img>
+                    <img src={blogImage} alt="blog img" className={styles['blog-img']}></img>
+                </div>
+                <hr className={styles['footer-line']}></hr>
+                <footer>
+                    <div className={styles['content']}>
+                        <div>
+                            <p>About</p>
+                            <table>
+                                <tr>
+                                    <td>Careers</td>
+                                    <td>Terms of Service</td>
+                                </tr>
+                                <tr>
+                                    <td>Press &#38; news</td>
+                                    <td>Intellectual Property Claim</td>
+                                </tr>
+                                <tr>
+                                    <td>Privacy Policy</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <p>Support</p>
+                            <table>
+                                <tr>
+                                    <td>FAQ</td>
+                                    <td>Trusts &#38; Safety</td>
+                                </tr>
+                                <tr>
+                                    <td>Help &#38; Support</td>
+                                    <td>Contact Us</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div>
+                            <p>Community</p>
+                            <table>
+                                <tr>
+                                    <td>Blog</td>
+                                    <td>Affliates</td>
+                                </tr>
+                                <tr>
+                                    <td>Forum</td>
+                                    <td>Invite a friend</td>
+                                </tr>
+                                <tr>
+                                    <td>Podcasts</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div className={styles['footer-text']}>
+                        <p>All rights reserved. Baby Diary is designed for educational purposes only.</p> 
+                        <p>
+                            Consult with a medical professional if you have health concerns. 
+                            Use of this site is subject to our <a href="localhost:3000/">Terms of Use</a> and <a href="localhost:3000/">Privacy Policy.</a>
+                        </p>
+                    </div>
+                </footer>
             </div>
         </div>
     );

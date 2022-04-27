@@ -29,7 +29,7 @@ interface CardDetails {
     height: string,
     width?: string,
     bdRadius: string,
-    children: React.ReactNode
+    children?: React.ReactNode
 }
 
 export const Card:React.FC<CardDetails> = ({ bgImage, height, width, bdRadius, children}) => {
@@ -37,7 +37,8 @@ export const Card:React.FC<CardDetails> = ({ bgImage, height, width, bdRadius, c
         height: `${height}`,
         width: `${width}`,
         backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${bgImage})`,
-        borderRadius: `${bdRadius}`
+        borderRadius: `${bdRadius}`,
+        backgroundRepeat: "no-repeat"
     }
 
     return (
