@@ -29,14 +29,15 @@ interface CardDetails {
     height: string,
     width?: string,
     bdRadius: string,
+    gradientColor?: string,
     children?: React.ReactNode
 }
 
-export const Card:React.FC<CardDetails> = ({ bgImage, height, width, bdRadius, children}) => {
+export const Card:React.FC<CardDetails> = ({ bgImage, height, width = "262px", bdRadius, gradientColor = "rgba(0, 0, 0, 0.45)", children}) => {
     let style = {
         height: `${height}`,
         width: `${width}`,
-        backgroundImage: `linear-gradient(to left, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(${bgImage})`,
+        backgroundImage: `linear-gradient(to left, ${gradientColor}, ${gradientColor}), url(${bgImage})`,
         borderRadius: `${bdRadius}`,
         backgroundRepeat: "no-repeat"
     }

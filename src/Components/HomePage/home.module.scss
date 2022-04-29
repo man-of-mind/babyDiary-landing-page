@@ -76,20 +76,11 @@
             }
         }
         .new-baby-video {
-            margin-right: 100px;
-            margin-left: auto;
-            padding: 70px 0px 70px 0px;
-            height: 302px;
-            width: 500px;
-            border-radius: 16px;
-            background-image: url('../../images/newbaby.svg');
-            background-repeat: no-repeat;
-            background-position: center;
-            justify-content: center;
-            align-items: center;
+            padding: 70px 100px 70px 70px;
             .play-button {
                 display: block;
-                margin: 125px auto;
+                margin: auto;
+                padding-top: 110px;
             }
         }
     }
@@ -300,70 +291,5 @@
     .footer-line {
         border-top: 1px solid #E4E5E7;
         width: 100%;
-    }
-    footer {
-        padding: 47px 0px 0px 0px;
-        width: 100%;
-        .content {
-            padding: 0 128px 0 128px;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            div {
-                p {
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 30px;
-                    color: #7A7E84;
-                }
-                table tr td {
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 30px;
-                    color: #7A7E84;
-                    padding-right: 10px;
-                }
-            }
-        }
-        .footer-text {
-            padding: 28px 0 42px 128px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 30px;
-            color: #868686;
-            p a {
-                text-decoration: none;
-                color: red
-            }
-        }
-        hr {
-            border-top: 1px solid #E4E5E7;
-            width: 100%;
-        }
-        .footer-icons {
-            display: flex;
-            justify-content: space-between;
-            padding: 27px 128px 35px 128px;
-            align-items: center;
-            .logo {
-                padding-top: 10px;
-                padding-left: 5px;
-            }
-            p {
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 30px;
-                padding-left: 50px;
-                color: #868686;
-            }
-            .facebook {
-                margin-left: auto;
-                padding-right: 28px;
-            }
-            .instagram {
-                padding: 0 28px 0 28px;
-            }
-        }
     }
 }

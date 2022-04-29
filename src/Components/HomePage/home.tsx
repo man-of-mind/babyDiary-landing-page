@@ -2,25 +2,12 @@ import React from "react";
 import Navbar from "../Navbar/Navbar";
 import styles from "./home.module.scss";
 import { ButtonCard, Card } from "../Cards/Cards";
+import newBaby from '../../images/newbaby.svg';
 import pregnancy from "../../images/pregnancy.svg";
 import playIcon from "../../images/play.svg";
-import pregnantWoman from "../../images/pregnantWoman.svg";
-import babyImg from "../../images/baby.svg";
-import diaperImg from "../../images/diaper.svg";
-import laborPic from "../../images/labor.svg";
-import datePicker from "../../images/Vector.svg";
-import GainCalc from "../../images/gaincalc.svg";
-import Clock from "../../images/clock.svg";
-import ChildGrowth from "../../images/childgrowth.svg";
-import Memories from "../../images/memories.svg";
-import Scheduler from "../../images/scheduler.svg";
 import { IconBody } from "../IconContainer/IconBody";
 import babyDiary from "../../images/babydiary.svg";
 import diary from "../../images/diary.svg";
-import jotter from "../../images/jotter.svg";
-import babyName from "../../images/babyName.svg";
-import pregnancyPain from "../../images/pregnancyPain.svg";
-import pregnancySign from "../../images/pregnancySigns.svg";
 import backIcon from "../../images/back.svg";
 import mumBaby from "../../images/mum-baby.svg";
 import nextIcon from "../../images/next.svg";
@@ -28,13 +15,47 @@ import appStore from "../../images/appStore.svg";
 import diaryImage from "../../images/diary-image.svg";
 import googlePlay from "../../images/googlePlay.svg";
 import blogImage from "../../images/blog-image.svg";
-import logo from "../../images/logo.svg";
-import babyDiaryLogo from "../../images/babyDiaryColored.svg";
-import facebook from "../../images/facebook.svg";
-import instagram from "../../images/instagram.svg";
-import twitter from "../../images/twitter.svg";
-import Mlogo from "../../images/m-logo.svg";
+import { Footer } from "../footer/Footer";
+import { babyDiaryVideosData, expertSectionData, Icons } from "../utils";
 
+
+let expertSection = expertSectionData.map(data => {
+    return(
+        <Card width="292px" height="380px" bgImage={data.image} bdRadius="15px">
+            <div className={styles['text']}>{data.text}</div>
+        </Card>
+    );
+});
+
+let iconsSection = Icons.map(icon => {
+    return(
+        <IconBody icon={icon.image} text={icon.text}></IconBody>
+    );
+});
+
+let babyDiaryVideoSection = babyDiaryVideosData.map(diary => {
+    return(
+        <div>
+            <Card bgImage={diary.image} height="160px" bdRadius="10px">
+                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
+            </Card>
+            <div className={styles['text']}>
+                <p className={styles['description']}>{diary.text}</p>
+                <p className={styles['minute']}>12 mins</p>
+            </div>
+        </div>
+    );
+});
+
+let babyDiaryBlogSection = babyDiaryVideosData.map(blog => {
+    return (
+        <div>
+            <Card bgImage={blog.image} height="160px" bdRadius="10px" gradientColor="rgba(0, 0, 0, 0)" />
+            <p className={styles['blog-title']}>{blog.text}</p>
+            <p className={styles['description']}>From fertility troubles to baby-name...</p>        
+        </div>
+    );
+});
 
 export default function Home() {
     return(
@@ -71,32 +92,18 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles['new-baby-video']}>
-                        <img src={playIcon} alt="play video" className={styles['play-button']}></img>
+                        <Card width="480px" height="300px" gradientColor="rgba(0, 0, 0, 0)" bdRadius="16px" bgImage={newBaby}>
+                            <img src={playIcon} alt="play video" className={styles['play-button']}></img>
+                        </Card>
                     </div>
                 </div>
                 <div className={styles['expert-text']}>Get experts advice and answers</div>
                 <div className={styles['expert-pics']}>
-                    <Card width="292px" height="380px" bgImage={pregnantWoman} bdRadius="15px">
-                        <div className={styles['text']}>Is it safe?</div>
-                    </Card>
-                    <Card width="292px" height="380px" bgImage={laborPic} bdRadius="15px">
-                        <div className={styles['text']}>Labor and Delivery</div>
-                    </Card>
-                    <Card width="292px" height="380px" bgImage={diaperImg} bdRadius="15px">
-                        <div className={styles['text']}>Diapering</div>
-                    </Card>
-                    <Card width="292px" height="380px" bgImage={babyImg} bdRadius="15px">
-                        <div className={styles['text']}>Baby sleep</div>
-                    </Card>
+                    {expertSection}
                 </div>
                 <div className={[styles['expert-text'], styles['explore-text']].join(" ")}>Explore our tools</div>
                 <div className={styles['explore-icons']}>
-                    <IconBody icon={datePicker} text="Due Date Calculator"></IconBody>
-                    <IconBody icon={GainCalc} text="Pregnancy Gain Calculator"></IconBody>
-                    <IconBody icon={Clock} text="Contraction Timer"></IconBody>
-                    <IconBody icon={ChildGrowth} text="Child Growth Chart"></IconBody>
-                    <IconBody icon={Scheduler} text="Immunization Scheduler"></IconBody>
-                    <IconBody icon={Memories} text="Memories Save"></IconBody>
+                    {iconsSection}
                 </div>
                 <div className={styles["baby-videos"]}>
                     <div className={styles['header']}>
@@ -111,42 +118,7 @@ export default function Home() {
                         <ButtonCard width="178px" bgColor="#FFFFFF" color="#000" text="View more videos"></ButtonCard>
                     </div>
                     <div className={styles['videos']}>
-                        <div>
-                            <Card bgImage={jotter} width="262px" height="160px" bdRadius="10px">
-                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
-                            </Card>
-                            <div className={styles['text']}>
-                                <p className={styles['description']}>7 Baby’s Checklist</p>
-                                <p className={styles['minute']}>12 mins</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Card bgImage={babyName} width="262px" height="160px" bdRadius="10px">
-                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
-                            </Card>
-                            <div className={styles['text']}>
-                                <p className={styles['description']}>Awesome baby name ideas</p>
-                                <p className={styles['minute']}>12 mins</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Card bgImage={pregnancySign} width="262px" height="160px" bdRadius="10px">
-                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
-                            </Card>
-                            <div className={styles['text']}>
-                                <p className={styles['description']}>10 signs you are pregnant</p>
-                                <p className={styles['minute']}>12 mins</p>
-                            </div>
-                        </div>
-                        <div>
-                            <Card bgImage={pregnancyPain} width="262px" height="160px" bdRadius="10px">
-                                <img className={styles['videos-img']} src={playIcon} alt="play video"></img> 
-                            </Card>
-                            <div className={styles['text']}>
-                                <p className={styles['description']}>Pregnancy and back pain</p>
-                                <p className={styles['minute']}>12 mins</p>
-                            </div>
-                        </div>
+                        {babyDiaryVideoSection}
                     </div>
                 </div>
                 <div className={styles['testimonial']}>
@@ -165,26 +137,7 @@ export default function Home() {
                 <div className={styles['diary-blog']}>
                     <div className={styles['baby-blog']}>Baby Diary Blog</div>
                     <div className={styles['blog']}>
-                        <div>
-                            <Card bgImage={jotter} width="262px" height="160px" bdRadius="10px" />
-                            <p className={styles['blog-title']}>7 Baby’s Checklist</p>
-                            <p className={styles['description']}>From fertility troubles to baby-name...</p>        
-                        </div>
-                        <div>
-                            <Card bgImage={babyName} width="262px" height="160px" bdRadius="10px" />
-                            <p className={styles['blog-title']}>Awesome baby name ideas</p>
-                            <p className={styles['description']}>From fertility troubles to baby-name...</p>
-                        </div>
-                        <div>
-                            <Card bgImage={pregnancySign} width="262px" height="160px" bdRadius="10px" />
-                            <p className={styles['blog-title']}>10 signs you are pregnant</p>
-                            <p className={styles['description']}>From fertility troubles to baby-name...</p>
-                        </div>
-                        <div>
-                            <Card bgImage={pregnancyPain} width="262px" height="160px" bdRadius="10px" />
-                            <p className={styles['blog-title']}>Pregnancy and back pain</p>
-                            <p className={styles['description']}>From fertility troubles to baby-name...</p>
-                        </div>
+                        {babyDiaryBlogSection}
                     </div>
                 </div>
                 <div className={styles['baby-center-app']}>
@@ -198,72 +151,7 @@ export default function Home() {
                     <img src={blogImage} alt="blog img" className={styles['blog-img']}></img>
                 </div>
                 <hr className={styles['footer-line']}></hr>
-                <footer>
-                    <div className={styles['content']}>
-                        <div>
-                            <p>About</p>
-                            <table>
-                                <tr>
-                                    <td>Careers</td>
-                                    <td>Terms of Service</td>
-                                </tr>
-                                <tr>
-                                    <td>Press &#38; news</td>
-                                    <td>Intellectual Property Claim</td>
-                                </tr>
-                                <tr>
-                                    <td>Privacy Policy</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div>
-                            <p>Support</p>
-                            <table>
-                                <tr>
-                                    <td>FAQ</td>
-                                    <td>Trusts &#38; Safety</td>
-                                </tr>
-                                <tr>
-                                    <td>Help &#38; Support</td>
-                                    <td>Contact Us</td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div>
-                            <p>Community</p>
-                            <table>
-                                <tr>
-                                    <td>Blog</td>
-                                    <td>Affliates</td>
-                                </tr>
-                                <tr>
-                                    <td>Forum</td>
-                                    <td>Invite a friend</td>
-                                </tr>
-                                <tr>
-                                    <td>Podcasts</td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                    <div className={styles['footer-text']}>
-                        <p>All rights reserved. Baby Diary is designed for educational purposes only.</p> 
-                        <p>
-                            Consult with a medical professional if you have health concerns. 
-                            Use of this site is subject to our <a href="localhost:3000/">Terms of Use</a> and <a href="localhost:3000/">Privacy Policy.</a>
-                        </p>
-                    </div>
-                    <hr></hr>
-                    <div className={styles['footer-icons']}>
-                        <img src={logo} alt="logo"></img>
-                        <img src={babyDiaryLogo} alt="baby videos" className={styles['logo']} />
-                        <p>&#169; Baby Diary. 2020</p>
-                        <img src={facebook} alt="facebook" className={styles['facebook']}></img>
-                        <img src={twitter} alt="twitter"></img>
-                        <img src={instagram} alt="instagram" className={styles['instagram']}></img>
-                        <img src={Mlogo} alt="mLogo app"></img>
-                    </div>
-                </footer>
+                <Footer />
             </div>
         </div>
     );
