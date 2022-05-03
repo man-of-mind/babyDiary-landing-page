@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/babyDiary-landing-page/static/css/main.07f0a9ba.css",
+    "main.css": "/babyDiary-landing-page/static/css/main.f8bd9307.css",
     "main.js": "/babyDiary-landing-page/static/js/main.080c07eb.js",
     "static/media/health.svg": "/babyDiary-landing-page/static/media/health.6cfb767af5c5e28fe528.svg",
     "static/media/pregnantWoman.svg": "/babyDiary-landing-page/static/media/pregnantWoman.1966e753843e3e65457907ca720ba8d3.svg",
@@ -39,11 +39,11 @@
     "static/media/search_icon.svg": "/babyDiary-landing-page/static/media/search_icon.c0edf9a3172b7ab93d00de290c7c678d.svg",
     "static/media/facebook.svg": "/babyDiary-landing-page/static/media/facebook.6651044b33504307d2d470eee9d76845.svg",
     "static/media/Ellipse 25.svg": "/babyDiary-landing-page/static/media/Ellipse 25.8e6b18af878fbad75b53.svg",
-    "main.07f0a9ba.css.map": "/babyDiary-landing-page/static/css/main.07f0a9ba.css.map",
+    "main.f8bd9307.css.map": "/babyDiary-landing-page/static/css/main.f8bd9307.css.map",
     "main.080c07eb.js.map": "/babyDiary-landing-page/static/js/main.080c07eb.js.map"
   },
   "entrypoints": [
-    "static/css/main.07f0a9ba.css",
+    "static/css/main.f8bd9307.css",
     "static/js/main.080c07eb.js"
   ]
 }
